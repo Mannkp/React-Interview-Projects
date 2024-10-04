@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import "./style.css";
+import { FaStar } from "react-icons/fa";
 
 const LoadMore = ({ url }) => {
     const [loading, setLoading] = useState(false);
@@ -47,14 +48,14 @@ const LoadMore = ({ url }) => {
                             <img src={item?.thumbnail} alt={'product card'} />
                             <p>{item?.description}</p>
                             <div className="priceSection">
-                                <p>Price: {item?.price}</p>
+                                <p>Price: ${item?.price}</p>
                                 <p>{item?.discountPercentage}% off!</p>
-                                <p>rated {item?.rating}</p>
+                                <p style={{ display: 'flex', alignItems: "center", justifyContent: "space-between", gap: "0.1rem" }}>rated {item?.rating}<FaStar /></p>
                             </div>
                         </div>
                     ))}
                 </div>
-                <button className="loadMoreButton" disabled={loading} onClick={handleLoadMore}>Load More</button>
+                {products?.products?.length > loadedProducts?.length && <button className="loadMoreButton" disabled={loading} onClick={handleLoadMore}>Load More</button>}
             </div>}
             <div className="approach">
                 <p>Approach 1: (implemented here)</p>
