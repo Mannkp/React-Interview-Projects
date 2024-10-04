@@ -1,0 +1,34 @@
+div.LoadMore {
+  padding: 4rem 0;
+}
+
+div.LoadMore > h2 {
+  text-align: center;
+}
+
+div.LoadMore > div.productContainer {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+div.productContainer > div.productCard {
+  padding: 20px 15px;
+  border: 1px solid black;
+  min-width: 250px;
+  max-width: min-content;
+  margin: 20px auto;
+}
+
+div.productContainer > div.productCard > div.priceSection {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1rem;
+}
+
+button.loadMoreButton {
+  display: block;
+  margin: 20px auto;
+}

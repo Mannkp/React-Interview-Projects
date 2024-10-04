@@ -1,0 +1,35 @@
+div.accordian {
+  margin: 4rem auto 8rem;
+  text-align: center;
+}
+
+div.accordian > button {
+  min-width: 4rem;
+  padding: 10px 20px;
+  margin: 20px auto;
+}
+
+div.accordian > div.item {
+  padding: 15px 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+div.item > div.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  gap: 2rem;
+}
+
+div.accordian > div.item > div.accordian-body > p {
+  font-size: medium;
+  text-align: left;
+  margin: 0;
+}
