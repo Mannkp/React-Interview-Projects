@@ -5,17 +5,33 @@ import RandomColorGenerator from "./components/RandomColorGenerator";
 import StarRatings from "./components/StarRatings";
 import LoadMore from "./components/LoadMore";
 import TreeView from "./components/TreeView";
+import LightDarkMode from "./components/LightDarkMode";
+import useLocalStorage from "./hooks/useLocalStorage";
+import ScrollIndicator from "./components/ScrollIndicator";
 
 function App() {
+  //reading userPreference of theme!
+  const defaultTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+
+  const [theme, setTheme] = useLocalStorage("theme", defaultTheme);
+
   return (
-    <div className="App">
-      <Accordian />
-      <RandomColorGenerator />
-      <StarRatings noOfStars={4} />
-      <ImageSlider url={"https://picsum.photos/v2/list?page=1&limit=7"} />
-      <LoadMore url={"https://dummyjson.com/products"} />
-      <TreeView />
-    </div>
+    <>
+      <header>
+        <TreeView />
+      </header>
+      <div className="App" data-theme={theme}>
+        <Accordian />
+        <RandomColorGenerator />
+        <StarRatings noOfStars={4} />
+        <ImageSlider url={"https://picsum.photos/v2/list?page=1&limit=7"} />
+        <LoadMore url={"https://dummyjson.com/products"} />
+        <LightDarkMode mode={theme} setMode={setTheme} />
+        <ScrollIndicator size={5} color={"tomato"} />
+      </div>
+    </>
   );
 }
 

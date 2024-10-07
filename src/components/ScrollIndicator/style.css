@@ -1,0 +1,11 @@
+div.ProgressBar-Container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: all 3s ease-in-out;
+}
+
+div.ProgressBar-Container > div.progressBar {
+  z-index: 999;
+  background: red;
+}

@@ -2,12 +2,12 @@ section.TreeView {
   box-sizing: border-box;
   background: #f8f8f8;
   font-weight: 500;
-  left: 0;
-  position: absolute;
-  min-width: 100%;
-  padding: 4rem 20px;
-  min-height: max-content;
-  margin-bottom: 4rem;
+  min-width: 300px;
+  padding: 4rem 0px;
+
+  h2 {
+    margin-top: 0;
+  }
 }
 
 div.menu {
@@ -20,7 +20,7 @@ div.menu {
 div.menu > button {
   background: transparent;
   border: none;
-  margin: 20px 0 10px;
+  margin: 20px 0;
   color: white;
   cursor: pointer;
 }
@@ -42,7 +42,7 @@ li > div > a:active {
 }
 
 ul.nav {
-  padding: 20px 15px;
+  padding: 0px 15px 20px;
 }
 
 ul.nav > li > div > a.menu-item {

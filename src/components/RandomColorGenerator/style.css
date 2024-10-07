@@ -4,6 +4,7 @@ section.RandomColorGenerator {
   padding: 20px;
   font-weight: 500;
   min-width: 300px;
+  margin: 0 auto;
 }
 
 section.RandomColorGenerator > h2,
@@ -16,6 +17,7 @@ section.RandomColorGenerator > div.color {
   margin: 40px auto;
   max-width: 60%;
   padding: 10px 15px;
+  color: black;
 }
 
 section.RandomColorGenerator > div.color {
@@ -36,6 +38,10 @@ section.RandomColorGenerator > button:hover {
 }
 
 @media (min-width: 650px) {
+  section.RandomColorGenerator {
+    max-width: 72rem;
+  }
+
   section.RandomColorGenerator > div.color {
     max-width: 40%;
   }

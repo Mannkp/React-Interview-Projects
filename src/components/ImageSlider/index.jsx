@@ -64,6 +64,9 @@ function ImageSlider({ url }) {
                     }
                 </span>
             </div>
+            <div className="logic">
+                <p>we have a state, currentSlide, where we store the id of current image, and is used for both images and mini-buttons, so on clicking next/prev button on selecting the mini-button at bottom of slider, the currentSlide number updates and div containing image corresponding to that id is set as visible. </p>
+            </div>
         </section>
     )
 }

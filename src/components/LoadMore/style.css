@@ -1,5 +1,6 @@
 section.LoadMoreSection {
   padding: 4rem 20px;
+  margin: 0 auto;
 }
 
 div.LoadMore > h2 {
@@ -15,7 +16,7 @@ div.LoadMore > div.productContainer {
 
 div.productContainer > div.productCard {
   padding: 20px 15px;
-  border: 1px solid black;
+  border: 1px solid var(--text-primary);
   min-width: 250px;
   max-width: min-content;
   margin: 20px auto;
@@ -35,4 +36,10 @@ button.loadMoreButton {
 
 div.productCard > h3 {
   margin-top: 0px !important;
+}
+
+@media (min-width: 650px) {
+  section.LoadMoreSection {
+    max-width: 72rem;
+  }
 }

@@ -5,6 +5,7 @@ section.Image-Slider {
   flex-direction: column;
   padding: 4rem 15px;
   min-width: 300px;
+  margin: 0 auto;
 }
 
 div.slider {
@@ -99,6 +100,10 @@ button.currentSlideButton.darkButton {
 }
 
 @media (min-width: 650px) {
+  section.Image-Slider {
+    max-width: 72rem;
+  }
+
   span.buttons {
     top: 90%;
   }

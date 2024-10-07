@@ -1,3 +1,7 @@
+section.Accordian {
+  margin: 0 auto;
+}
+
 div.accordian {
   margin: 4rem auto 8rem;
   text-align: center;
@@ -11,7 +15,7 @@ div.accordian > button {
 
 div.accordian > div.item {
   padding: 15px 20px;
-  border: 2px solid black;
+  border: 2px solid var(--text-primary);
   border-radius: 20px;
   cursor: pointer;
 
@@ -32,4 +36,10 @@ div.accordian > div.item > div.accordian-body > p {
   font-size: medium;
   text-align: left;
   margin: 0;
+}
+
+@media (min-width: 1200px) {
+  section.Accordian {
+    max-width: 72rem;
+  }
 }
