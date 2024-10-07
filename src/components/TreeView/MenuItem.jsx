@@ -9,7 +9,7 @@ const MenuItem = ({ data }) => {
 
     return (
         <>
-            {data && (<div onClick={handleShowChildren}>
+            {data && (<div onClick={handleShowChildren} onKeyDown={handleShowChildren} tabIndex={0}>
                 <a href={data?.to} className="menu-item">{data?.label}</a>
                 {data?.children && data?.children?.length > 0 && <span>{showChildren ? '-' : '+'}</span>}
             </div>

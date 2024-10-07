@@ -6,7 +6,7 @@ section.TreeView {
   position: absolute;
   min-width: 100%;
   padding: 4rem 20px;
-  min-height: 90vh;
+  min-height: max-content;
   margin-bottom: 4rem;
 }
 

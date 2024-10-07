@@ -26,7 +26,7 @@ function TreeView() {
 
   return (
     <section className='TreeView'>
-      TreeView
+      <h2>Tree-View / hamburger menu</h2>
       <div className="menu" ref={menuRef}>
         <button onClick={handleMenuClick} className={isMenuOpen ? "btn-light" : "btn-dark"}>
           {isMenuOpen ? <RxCross2 size={24} /> : <RxHamburgerMenu size={24} />}
