@@ -1,0 +1,67 @@
+section.TreeView {
+  box-sizing: border-box;
+  background: #f8f8f8;
+  font-weight: 500;
+  left: 0;
+  position: absolute;
+  min-width: 100%;
+  padding: 4rem 20px;
+  min-height: 90vh;
+  margin-bottom: 4rem;
+}
+
+div.menu {
+  background: navy;
+  min-width: 280px;
+  width: fit-content;
+  max-width: 100%;
+}
+
+div.menu > button {
+  background: transparent;
+  border: none;
+  margin: 20px 0 10px;
+  color: white;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  color: white;
+  list-style: none;
+}
+
+li > div > a,
+li > div > a:visited {
+  color: white;
+  text-decoration: none;
+}
+li > div > a:hover,
+li > div > a:active {
+  color: red;
+}
+
+ul.nav {
+  padding: 20px 15px;
+}
+
+ul.nav > li > div > a.menu-item {
+  margin: 0 10px;
+  line-height: 2rem;
+  border-bottom: 2px solid wheat;
+}
+
+ul.subMenu > li {
+  line-height: 1.5rem;
+}
+
+ul > li > div {
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+ul > li > div > span {
+  padding: 0 10px;
+  font-weight: 500;
+  font-size: 1.4rem;
+}

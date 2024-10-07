@@ -37,7 +37,7 @@ const LoadMore = ({ url }) => {
 
 
     return (
-        <section>
+        <section className="LoadMoreSection">
             {loading && <div>Loading...</div>}
             {!loading && <div className="LoadMore">
                 <h2>Load More Component</h2>
@@ -57,8 +57,8 @@ const LoadMore = ({ url }) => {
                 </div>
                 {products?.products?.length > loadedProducts?.length && <button className="loadMoreButton" disabled={loading} onClick={handleLoadMore}>Load More</button>}
             </div>}
-            <div className="approach">
-                <p>Approach 1: (implemented here)</p>
+            <div className="logic">
+                <p>Load More Approach 1: (implemented here)</p>
                 <p>fetch all data at once, use slice to slice fetched data upto required count, then on clicking loadmore button, slice more data using: </p>
                 <p>Load initial data <code>{' useEffect(() => {products && products?.products && setLoadedProducts(products?.products.slice(0, loadMoreCount.current))}, [products, products?.products])'}</code></p>
                 <p>Load more data handler<code>{'const handleLoadMore = useCallback(() => { setLoadedProducts(prev => [...prev, ...products?.products?.slice(loadedProducts.length, loadedProducts.length + loadMoreCount.current)])}, [loadedProducts, products])'}</code></p>

@@ -1,5 +1,5 @@
-div.LoadMore {
-  padding: 4rem 0;
+section.LoadMoreSection {
+  padding: 4rem 20px;
 }
 
 div.LoadMore > h2 {
@@ -31,4 +31,8 @@ div.productContainer > div.productCard > div.priceSection {
 button.loadMoreButton {
   display: block;
   margin: 20px auto;
+}
+
+div.productCard > h3 {
+  margin-top: 0px !important;
 }
