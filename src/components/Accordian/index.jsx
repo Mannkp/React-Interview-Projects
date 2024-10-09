@@ -36,7 +36,11 @@ const Accordian = () => {
                 </button>
 
                 {data && data?.map((item, index) => (
-                    <div className="item" key={index + item?.id} onClick={() => (isMultiSelect ? handleMultiSelect(item?.id) : handleSingleSelection(item?.id))}>
+                    <div className="item" key={index + item?.id} tabIndex={0} onKeyDown={(e) => {
+                        e.key === "Enter" && (isMultiSelect ? handleMultiSelect(item?.id) : handleSingleSelection(item?.id))
+                    }} onClick={
+                        () => (isMultiSelect ? handleMultiSelect(item?.id) : handleSingleSelection(item?.id))
+                    }>
                         <div className="title">
                             <h3>{item?.question}</h3>
                             <span>+</span>

@@ -1,0 +1,11 @@
+section.customModal {
+  min-width: 300px;
+  padding: 4rem 20px;
+  margin: 0 auto;
+}
+
+@media (min-width: 650px) {
+  section.customModal {
+    max-width: 72rem;
+  }
+}

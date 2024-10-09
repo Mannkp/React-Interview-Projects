@@ -3,11 +3,13 @@ section.TreeView {
   background: #f8f8f8;
   font-weight: 500;
   min-width: 300px;
-  padding: 4rem 0px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
 
-  h2 {
+  /* h2 {
     margin-top: 0;
-  }
+  } */
 }
 
 div.menu {
@@ -15,6 +17,7 @@ div.menu {
   min-width: 280px;
   width: fit-content;
   max-width: 100%;
+  position: relative;
 }
 
 div.menu > button {
@@ -25,24 +28,35 @@ div.menu > button {
   cursor: pointer;
 }
 
-ul {
+ul.nav,
+ul.subMenu {
   margin: 0;
   color: white;
   list-style: none;
 }
 
-li > div > a,
-li > div > a:visited {
+ul.nav > li > div > a,
+ul.subMenu > li > div > a,
+ul.nav > li > div > a:visited,
+ul.subMenu > li > div > a:visited {
   color: white;
   text-decoration: none;
 }
-li > div > a:hover,
-li > div > a:active {
+ul.nav > li > div > a:hover,
+ul.nav > li > div > a:active,
+ul.subMenu > li > div > a:hover,
+ul.subMenu > li > div > a:active {
   color: red;
 }
 
 ul.nav {
-  padding: 0px 15px 20px;
+  padding: 0px 0px 20px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100vh;
+  background: navy;
+  width: 100%;
 }
 
 ul.nav > li > div > a.menu-item {
@@ -55,13 +69,20 @@ ul.subMenu > li {
   line-height: 1.5rem;
 }
 
-ul > li > div {
+ul.nav > li > div,
+ul.subMenu > li > div {
   cursor: pointer;
   padding-right: 20px;
 }
 
-ul > li > div > span {
+ul.nav > li > div > span,
+ul.subMenu > li > div > span {
   padding: 0 10px;
   font-weight: 500;
   font-size: 1.4rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+  scrollbar-gutter: stable;
 }

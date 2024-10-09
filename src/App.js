@@ -8,6 +8,8 @@ import TreeView from "./components/TreeView";
 import LightDarkMode from "./components/LightDarkMode";
 import useLocalStorage from "./hooks/useLocalStorage";
 import ScrollIndicator from "./components/ScrollIndicator";
+import Modal from "./components/Custom-Modal-Popup/Modal";
+import CounterwithUseReducer from "./components/ReducerExample-Counter/CounterwithUseReducer";
 
 function App() {
   //reading userPreference of theme!
@@ -30,6 +32,8 @@ function App() {
         <LoadMore url={"https://dummyjson.com/products"} />
         <LightDarkMode mode={theme} setMode={setTheme} />
         <ScrollIndicator size={5} color={"tomato"} />
+        <Modal />
+        <CounterwithUseReducer />
       </div>
     </>
   );

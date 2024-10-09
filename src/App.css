@@ -30,4 +30,9 @@ div.logic {
   max-width: 60%;
   padding: 10px 15px;
   font-weight: 600;
+  text-align: left;
+}
+
+div.logic > ul {
+  text-align: left;
 }

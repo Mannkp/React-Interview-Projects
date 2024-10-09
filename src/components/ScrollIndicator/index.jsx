@@ -1,7 +1,5 @@
-import { useEffect } from 'react';
+import { useState, useEffect, useCallback, memo } from 'react';
 import './style.css';
-import { useState } from 'react';
-import { useCallback } from 'react';
 
 function ScrollIndicator({ size = 4, color = 'red' }) {
 
@@ -29,4 +27,4 @@ function ScrollIndicator({ size = 4, color = 'red' }) {
     )
 }
 
-export default ScrollIndicator
+export default memo(ScrollIndicator);

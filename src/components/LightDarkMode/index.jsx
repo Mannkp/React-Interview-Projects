@@ -8,8 +8,10 @@ function LightDarkMode({ mode, setMode }) {
 
     return (
         <section className="LightAndDarkMode">
-            <h2>Light and Dark Mode - {mode}</h2>
-            <button onClick={handleThemeToggle}>Toggle theme</button>
+            <div>
+                <h2>Light and Dark Mode - {mode}</h2>
+                <button onClick={handleThemeToggle}>Toggle theme</button>
+            </div>
         </section>
     )
 }

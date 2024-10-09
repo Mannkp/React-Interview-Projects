@@ -24,14 +24,18 @@ function TreeView() {
     return (() => document.removeEventListener('mousedown', handleMenuClose))
   })
 
+  useEffect(() => {
+    isMenuOpen ? document.body.classList.add("overflow-hidden") : document.body.classList.remove("overflow-hidden")
+  }, [isMenuOpen])
+
   return (
     <section className='TreeView'>
-      <h2>Tree-View / hamburger menu</h2>
       <div className="menu" ref={menuRef}>
         <button onClick={handleMenuClick}>
           {isMenuOpen ? <RxCross2 size={24} /> : <RxHamburgerMenu size={24} />}
         </button>
         <div className="menuItems">
+          {/* <h2>Tree-View / hamburger menu</h2> */}
           <NavMenu data={data} open={isMenuOpen} />
         </div>
       </div>

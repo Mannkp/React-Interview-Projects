@@ -3,7 +3,11 @@ section.LightAndDarkMode {
   padding: 0 15px;
   min-width: 300px;
   max-width: 100%;
-  min-height: 40vh;
+}
+
+section.LightAndDarkMode > div {
+  width: max-content;
+  margin: 0 auto;
 }
 
 @media (min-width: 650px) {
