@@ -13,8 +13,9 @@ const Modal = () => {
     return (
         <section className='customModal'>
             <div>
-                <button onClick={handlePopup}>Open Modal</button>
-                {showPopup && <ModalContent body={<div>This is a <h3>Popup</h3></div>} />}
+                <h2>Custom Popup Modal</h2>
+                <button onClick={handlePopup} className='modalButton'>Open Modal</button>
+                {showPopup && <ModalContent handlePopup={handlePopup} header={<div>This is Header</div>} body={<div>This is a <h3>Popup</h3></div>} footer={<div>This is Footer</div>} />}
             </div>
         </section>
     )

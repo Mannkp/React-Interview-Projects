@@ -3,6 +3,7 @@ section.LightAndDarkMode {
   padding: 0 15px;
   min-width: 300px;
   max-width: 100%;
+  text-align: center;
 }
 
 section.LightAndDarkMode > div {

@@ -10,6 +10,7 @@ import useLocalStorage from "./hooks/useLocalStorage";
 import ScrollIndicator from "./components/ScrollIndicator";
 import Modal from "./components/Custom-Modal-Popup/Modal";
 import CounterwithUseReducer from "./components/ReducerExample-Counter/CounterwithUseReducer";
+import GithubProfileFinder from "./components/GithubProfileFinder";
 
 function App() {
   //reading userPreference of theme!
@@ -26,6 +27,7 @@ function App() {
       </header>
       <div className="App" data-theme={theme}>
         <Accordian />
+        <CounterwithUseReducer />
         <RandomColorGenerator />
         <StarRatings noOfStars={4} />
         <ImageSlider url={"https://picsum.photos/v2/list?page=1&limit=7"} />
@@ -33,7 +35,7 @@ function App() {
         <LightDarkMode mode={theme} setMode={setTheme} />
         <ScrollIndicator size={5} color={"tomato"} />
         <Modal />
-        <CounterwithUseReducer />
+        <GithubProfileFinder />
       </div>
     </>
   );
