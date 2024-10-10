@@ -1,0 +1,35 @@
+section.TicTacToe {
+  min-width: 300px;
+  margin: 0 auto;
+  border: 1px solid red;
+  padding: 4rem 20px;
+}
+div.board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  margin: 0 auto;
+}
+div.board > div.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
+div.board > div.row > button {
+  margin: 0;
+  height: 100px;
+  width: 100px;
+  font-size: 2rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+}
+
+@media (min-width: 650px) {
+  section.TicTacToe {
+    max-width: 72rem;
+  }
+}

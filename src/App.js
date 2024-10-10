@@ -11,6 +11,7 @@ import ScrollIndicator from "./components/ScrollIndicator";
 import Modal from "./components/Custom-Modal-Popup/Modal";
 import CounterwithUseReducer from "./components/ReducerExample-Counter/CounterwithUseReducer";
 import GithubProfileFinder from "./components/GithubProfileFinder";
+import TicTacToe from "./components/TicTacToe";
 
 function App() {
   //reading userPreference of theme!
@@ -36,6 +37,7 @@ function App() {
         <ScrollIndicator size={5} color={"tomato"} />
         <Modal />
         <GithubProfileFinder />
+        <TicTacToe />
       </div>
     </>
   );
