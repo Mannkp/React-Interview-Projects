@@ -12,6 +12,7 @@ import Modal from "./components/Custom-Modal-Popup/Modal";
 import CounterwithUseReducer from "./components/ReducerExample-Counter/CounterwithUseReducer";
 import GithubProfileFinder from "./components/GithubProfileFinder";
 import TicTacToe from "./components/TicTacToe";
+import DynamicForms from "./components/DynamicForms";
 
 function App() {
   //reading userPreference of theme!
@@ -27,6 +28,7 @@ function App() {
         <TreeView />
       </header>
       <div className="App" data-theme={theme}>
+        <DynamicForms />
         <Accordian />
         <CounterwithUseReducer />
         <RandomColorGenerator />

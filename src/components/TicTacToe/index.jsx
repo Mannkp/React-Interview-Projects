@@ -16,18 +16,6 @@ function Board({ squares, setSquares, winner }) {
         const newSquares = squares.slice();
         newSquares[buttonIndex] = turn;
         turn === 'X' ? setTurn('O') : setTurn('X');
-        // let newArr = squares?.map((item, index) => {
-        //     if ((index === buttonIndex)) {
-        //         if (squares[index] === 'x' || squares[index] === 'o') { return item }
-        //         decideTurn();
-        //         return turn;
-        //     } else {
-        //         return item;
-        //     }
-        // }
-
-        // );
-        // setSquares(newArr);
         setSquares(newSquares);
     }, [setSquares, squares, turn, winner]);
 
@@ -62,7 +50,7 @@ function TicTacToe() {
     }
 
     const winningMoves = useMemo(() => [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 4, 8], [2, 4, 6], [0, 3, 6], [2, 5, 8]
+        [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 4, 8], [2, 4, 6], [0, 3, 6], [2, 5, 8], [1, 4, 7]
     ], []);
 
     const calculateWinner = useCallback((squares) => {
@@ -84,10 +72,13 @@ function TicTacToe() {
 
     return (
         <section className="TicTacToe">
+            <h2>Tic Tac Toe</h2>
             <Board squares={squares} setSquares={setSquares} winner={winner} />
             <button onClick={handleReset}>reset</button>
-            {winner && <div className="winner">Winner is: {winner}</div>}
-            {!winner && squares.every(Boolean) && <div className="draw">It's a draw!</div>}
+            <div className="result">
+                {winner && <div className="winner">Winner is: {winner}</div>}
+                {!winner && squares.every(Boolean) && <div className="draw">It's a draw!</div>}
+            </div>
         </section>
     )
 }

@@ -1,8 +1,12 @@
 section.TicTacToe {
   min-width: 300px;
   margin: 0 auto;
-  border: 1px solid red;
   padding: 4rem 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 div.board {
   display: flex;

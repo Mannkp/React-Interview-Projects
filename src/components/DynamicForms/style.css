@@ -1,0 +1,15 @@
+section.Dynamic-forms-using-Formik {
+  min-width: 300px;
+  margin: 4rem auto;
+  padding: 2rem 20px;
+}
+
+@media (min-width: 650px) {
+  section.Dynamic-forms-using-Formik {
+    max-width: 72rem;
+  }
+}
+
+div.error {
+  color: red;
+}
